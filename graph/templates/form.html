@@ -1,0 +1,7 @@
+{% extends "home.html" %}
+{% block content %}
+    <form method="post" action=".">{% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Підтвердити вершини" style=" background-color: #fff; font-weight: bold;">
+    </form>
+{% endblock %}
