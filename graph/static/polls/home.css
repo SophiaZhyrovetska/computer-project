@@ -31,7 +31,6 @@ table {
 html, body {
   width: 100%;
   height: 100%;
-  overflow: scroll;
 }
 
 body {
@@ -45,6 +44,11 @@ body {
 #particles {
   width: 100%;
   height: 100%;
+}
+#bar{
+      position: absolute;
+    top:0%;
+  width: 100%;
 }
 
 #intro {
@@ -73,10 +77,6 @@ p {
   color: #005544;
   border-color: #005544;
 }
-.folders {
-    margin: 0;
-    padding: 0;
-}
 
 
 
@@ -87,10 +87,7 @@ p {
 
 
 @media (max-width: 1200px) {
-    #navbar ul li {
-        width: 100%;
 
-    }
 }
 @-moz-keyframes spin {
     100% {
