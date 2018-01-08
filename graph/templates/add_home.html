@@ -3,8 +3,8 @@
 
 
 {% block content %}
-    <h3>{{ graph_lst }}</h3>
-    <div id="canvas" style="margin-top:-50px;height: 200px; border: 2px solid black;"></div>
+    <h3> Анімація Графа - {{ graph_lst }}</h3>
+    <div id="canvas" style="height: 200px; border: 2px solid #86e1c7;"></div>
     <h3>Матриця інцедентності</h3>
     <ul>
     {% for item in matrix_adjacency_undirected %}
@@ -17,14 +17,14 @@
     <hr>
     <h3>Гамільтовий цикл</h3>
     {% if cycle_Hamiltonian_undirected %}
-            <h4> граф має гамільтонів цикл</h4>
+            <h4> Граф має гамільтонів цикл</h4>
     {% else %}
         <h4>Граф не має гамільтоновогу циклу</h4>
     {% endif %}
     <hr>
     <h3> Двочастковість</h3>
     {% if is_Bipartite %}
-        <h4> грав Двочастковий</h4>
+        <h4> Граф Двочастковий</h4>
     {% else %}
         <h4>Граф не Двочастковий</h4>
     {% endif %}
