@@ -3,8 +3,8 @@
 
 
 {% block content %}
-
-    <div id="canvas" style="height: 250px"><h3>{{ graph_lst }}</h3></div>
+    <h3>{{ graph_lst }}</h3>
+    <div id="canvas" style="height: 200px; border: 2px solid black;"></div>
     <h3>Матриця інцедентності</h3>
     <ul>
     {% for item in matrix_adjacency_undirected %}
