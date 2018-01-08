@@ -33,6 +33,7 @@ class home_view(View):
                 lst_graph.append([int(form.cleaned_data.get("url")[i - 1]), int(form.cleaned_data.get("url")[i + 1])])
         print(lst_graph)
         context = {
+            "graph_lst": lst_graph,
             "matrix_adjacency_undirected": matrix_adjacency_undirected(lst_graph),
             "cycle_Euler_undirected": cycle_Euler_undirected(lst_graph),
             "cycle_Hamiltonian_undirected": cycle_Hamiltonian_undirected(lst_graph),

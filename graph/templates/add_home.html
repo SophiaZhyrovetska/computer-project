@@ -31,7 +31,24 @@
     <script type="text/javascript" src="{% static 'static/polls/js/jsnetworkx.js' %}"></script>
 
     <div id="canvas" style="height: 200px"><h1>Граф РУХАЄТЬСЯ</h1></div>
-    <script type ="text/javascript" src="{% static 'static/polls/js/Plswork.js' %}"></script>
+    <!--<script type ="text/javascript" src="{% static 'static/polls/js/Plswork.js' %}"></script>-->
+    <script type="text/javascript">
+    var G = new jsnx.Graph();
+
+G.addEdgesFrom({{ graph_lst }});
+
+jsnx.draw(G, {
+    element: '#canvas',
+    withLabels: true,
+    nodeStyle: {
+        fill: function (d) {
+            return d.data.color;
+        }
+    },
+    labelStyle: {fill: 'white'},
+    stickyDrag: true
+});
+    </script>
 
 
 {% endblock %}
