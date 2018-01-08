@@ -4,7 +4,7 @@
 
 {% block content %}
 
-
+    <div id="canvas" style="height: 250px"><h1>Граф РУХАЄТЬСЯ</h1></div>
     <h3>Матриця інцедентності</h3>
     <ul>
     {% for item in matrix_adjacency_undirected %}
@@ -30,7 +30,7 @@
     <script src="{% static 'static/polls/js/mini.js' %}" charset="utf-8"></script>
     <script type="text/javascript" src="{% static 'static/polls/js/jsnetworkx.js' %}"></script>
 
-    <div id="canvas" style="height: 200px"><h1>Граф РУХАЄТЬСЯ</h1></div>
+
     <!--<script type ="text/javascript" src="{% static 'static/polls/js/Plswork.js' %}"></script>-->
     <script type="text/javascript">
     var G = new jsnx.Graph();
