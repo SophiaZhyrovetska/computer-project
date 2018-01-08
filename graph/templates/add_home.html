@@ -4,28 +4,31 @@
 
 {% block content %}
     <h3>{{ graph_lst }}</h3>
-    <div id="canvas" style="height: 200px; border: 2px solid black;"></div>
+    <div id="canvas" style="margin-top:-50px;height: 200px; border: 2px solid black;"></div>
     <h3>Матриця інцедентності</h3>
     <ul>
     {% for item in matrix_adjacency_undirected %}
         <li>{{ item }}</li>
     {% endfor %}
     </ul>
+    <hr>
     <h3>Цикл Ейлера</h3>
     {{ cycle_Euler_undirected }}
-
+    <hr>
     <h3>Гамільтовий цикл</h3>
     {% if cycle_Hamiltonian_undirected %}
             <h4> граф має гамільтонів цикл</h4>
     {% else %}
         <h4>Граф не має гамільтоновогу циклу</h4>
     {% endif %}
+    <hr>
     <h3> Двочастковість</h3>
     {% if is_Bipartite %}
         <h4> грав Двочастковий</h4>
     {% else %}
         <h4>Граф не Двочастковий</h4>
     {% endif %}
+    <hr>
 
     <script src="{% static 'static/polls/js/mini.js' %}" charset="utf-8"></script>
     <script type="text/javascript" src="{% static 'static/polls/js/jsnetworkx.js' %}"></script>
