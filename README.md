@@ -1,4 +1,5 @@
 <h1>GodGraphs</h1>
+<small>made on Django</small>
 <h2 style="color:red; font-weight:700">FREE EARLY ACCESS Graph discover site</h2>
 <p>
 CS@UCU first-year project for Discrete Mathematics, which gives you an opportunity to discover one of most important field of discrete math - graphs</p>
@@ -12,4 +13,4 @@ CS@UCU first-year project for Discrete Mathematics, which gives you an opportuni
 
 
 
-<p>Bilayev Mikola, Sophia Kholod,Sophia Zhyrovetska</p>
+<p>By Bilayev Mikola, Sophia Kholod,Sophia Zhyrovetska</p>
