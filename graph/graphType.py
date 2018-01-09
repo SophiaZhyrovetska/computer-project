@@ -100,7 +100,7 @@ def isCycle(lst):
                 if (lst[i][1] == lst[i + 1][0]):
                     return True
 
-
+isCycle([[1,2],[2,3],[3,1]])
 
 def isWheel(lst):
     """
