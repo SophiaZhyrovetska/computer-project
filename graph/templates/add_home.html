@@ -1,3 +1,4 @@
+
 {% extends "home.html" %}
 {% load staticfiles %}
 
@@ -10,41 +11,42 @@
                     <div class="col-lg-2"></div>
                     <div class="col-lg-8">
                         <div style="display: block ; background-color: rgba(255,255,255,0.2)">
-                            <h3>  Граф - {{ graph_lst }}</h3>
+                            <h3>  Graph: {{ graph_lst }}</h3>
                             <div id="canvas" style=" height: 500px; border: 2px solid #86e1c7;"></div>
-                            <h3>Вид графа:</h3>
+                            <h3>Graph type:</h3>
                             <div style="display: inline-block">
+                                <h4>Undirected</h4>
                                 <h4>{% if parallelEdges %}
-                                    Паралельний
+                                    Contains parallel edges
                                 {% endif %}
                                 </h4>
                                 <h4>{% if isMulti %}
-                                    Мультиграф
+                                    Multigraph
                                 {% endif %}
                                 </h4>
                                 <h4>{% if isPseudo %}
-                                    Псевдо граф
+                                    Pseudograph
                                 {% endif %}
                                 </h4>
                                 <h4>{% if isSimple %}
-                                    Простий
+                                    Simple
                                 {% endif %}
                                 </h4>
                                 <h4>{% if isComplete %}
-                                    Повний
+                                    Complete
                                 {% endif %}
                                 </h4>
                                 <h4>{% if isCycle %}
-                                    Цикл
+                                    Cycle
                                 {% endif %}
                                 </h4>
                                 <h4>{% if isWheel %}
-                                    Колесо
+                                    Wheel
                                 {% endif %}
                                 </h4>
                             </div>
                             <hr>
-                            <h3>Матриця інцидентості</h3>
+                            <h3>Incidence matrix</h3>
                             <table style="width:100%;">
                                 {% for item in matrix_incidence_undirected %}
                                     <tr>
@@ -57,7 +59,7 @@
                             <hr>
 
 
-                            <h3>Матриця суміжності</h3>
+                            <h3>Adjacency matrix</h3>
                             <table width="100%">
                                 {% for item in matrix_adjacency_undirected %}
                                     <tr>
@@ -69,28 +71,28 @@
                             </table>
 
                             <hr>
-                            <h3>Цикл Ейлера</h3>
+                            <h3>Euler cycle</h3>
                             {{ cycle_Euler_undirected }}
                             <hr>
-                            <h3>Гамільтовий цикл</h3>
+                            <h3>Hamiltonian cycle</h3>
                             {% if cycle_Hamiltonian_undirected %}
-                                <h4> Граф має гамільтонів цикл</h4>
+                                <h4> No Hamiltonian cycle</h4>
                             {% else %}
-                                <h4>Граф не має гамільтоновогу циклу</h4>
+                                <h4>The graph has no Hamiltonian cycle</h4>
                             {% endif %}
                             <hr>
-                            <h3> Двочастковість</h3>
+                            <h3>Bipartite</h3>
                             {% if is_Bipartite %}
-                                <h4> Граф Двочастковий</h4>
+                                <h4> The graph is bipartite</h4>
                             {% else %}
-                                <h4>Граф не Двочастковий</h4>
+                                <h4>The graph isn't bipartite</h4>
                             {% endif %}
                             <hr>
 
-                        </div>
+</div>
                         <div class="col-lg-2"></div>
                     </div>
-                                                    <div class="footer">c.team_ucu
+                                                    <div class="footer">works
              </div>
                 </div>
             </div>
