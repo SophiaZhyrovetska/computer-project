@@ -3,63 +3,75 @@
 
 
 {% block content %}
-    
-    <h3> Анімація Графа - {{ graph_lst }}</h3>
-    <div id="canvas" style=" border: 2px solid #86e1c7;"></div>
-    <h3>Матриця інцидентості</h3>
-    <ul>
-    {% for item in matrix_incidence_undirected %}
-        <li><h4 style="letter-spacing: 15px">{{ item }}</h4></li>
-    {% endfor %}
-    </ul>
-    <hr>
-    <ul>
+    <header id="intro">
+        <div class="main_block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                        <div style="display: block ; background-color: rgba(255,255,255,0.2)">
+                            <h3> Анімація Графа - {{ graph_lst }}</h3>
+                            <div id="canvas" style=" border: 2px solid #86e1c7;"></div>
+                            <h3>Матриця інцидентості</h3>
+                            <ul>
+                                {% for item in matrix_incidence_undirected %}
+                                    <li><h4 style="letter-spacing: 15px">{{ item }}</h4></li>
+                                {% endfor %}
+                            </ul>
+                            <hr>
+                            <ul>
 
-    <h3>Матриця суміжності</h3>
-    {% for item in matrix_adjacency_undirected %}
-        <li><h4 style="letter-spacing: 15px">{{ item }}</h4></li>
-    {% endfor %}
-    </ul>
-    <hr>
-    <h3>Цикл Ейлера</h3>
-    {{ cycle_Euler_undirected }}
-    <hr>
-    <h3>Гамільтовий цикл</h3>
-    {% if cycle_Hamiltonian_undirected %}
-            <h4> Граф має гамільтонів цикл</h4>
-    {% else %}
-        <h4>Граф не має гамільтоновогу циклу</h4>
-    {% endif %}
-    <hr>
-    <h3> Двочастковість</h3>
-    {% if is_Bipartite %}
-        <h4> Граф Двочастковий</h4>
-    {% else %}
-        <h4>Граф не Двочастковий</h4>
-    {% endif %}
-    <hr>
-
+                                <h3>Матриця суміжності</h3>
+                                {% for item in matrix_adjacency_undirected %}
+                                    <li><h4 style="letter-spacing: 15px">{{ item }}</h4></li>
+                                {% endfor %}
+                            </ul>
+                            <hr>
+                            <h3>Цикл Ейлера</h3>
+                            {{ cycle_Euler_undirected }}
+                            <hr>
+                            <h3>Гамільтовий цикл</h3>
+                            {% if cycle_Hamiltonian_undirected %}
+                                <h4> Граф має гамільтонів цикл</h4>
+                            {% else %}
+                                <h4>Граф не має гамільтоновогу циклу</h4>
+                            {% endif %}
+                            <hr>
+                            <h3> Двочастковість</h3>
+                            {% if is_Bipartite %}
+                                <h4> Граф Двочастковий</h4>
+                            {% else %}
+                                <h4>Граф не Двочастковий</h4>
+                            {% endif %}
+                            <hr>
+                        </div>
+                        <div class="col-lg-2"></div>
+                    </div>
+                </div>
+            </div>
+    </header>
+    </div>
     <script src="{% static 'static/polls/js/mini.js' %}" charset="utf-8"></script>
     <script type="text/javascript" src="{% static 'static/polls/js/jsnetworkx.js' %}"></script>
 
 
     <!--<script type ="text/javascript" src="{% static 'static/polls/js/Plswork.js' %}"></script>-->
     <script type="text/javascript">
-    var G = new jsnx.Graph();
+        var G = new jsnx.Graph();
 
-G.addEdgesFrom({{ graph_lst }});
+        G.addEdgesFrom({{ graph_lst }});
 
-jsnx.draw(G, {
-    element: '#canvas',
-    withLabels: true,
-    nodeStyle: {
-        fill: function (d) {
-            return d.data.color;
-        }
-    },
-    labelStyle: {fill: 'white'},
-    stickyDrag: true
-});
+        jsnx.draw(G, {
+            element: '#canvas',
+            withLabels: true,
+            nodeStyle: {
+                fill: function (d) {
+                    return d.data.color;
+                }
+            },
+            labelStyle: {fill: 'white'},
+            stickyDrag: true
+        });
     </script>
 
 

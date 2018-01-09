@@ -23,19 +23,9 @@
 {% block navbar %}
 {% endblock %}
 <body id="particles">
-<header id="intro">
-    <div class="main_block">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-                    {% block content %}{% endblock content %}
-                </div>
-                <div class="col-md-2"></div>
-            </div>
-        </div>
-    </div>
-</header>
+
+{% block content %}{% endblock content %}
+
 <script type="text/javascript" src="{% static 'static/polls/js/jsnetworkx.js' %}" charset="utf-8"></script>
 <script type="text/javascript" src="{% static 'static/polls/js/d3.js' %}"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
