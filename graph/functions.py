@@ -1,3 +1,4 @@
+
 def get_nodes(graph):
     """
     Returns a sorted list of all nodes in a graph
@@ -275,14 +276,14 @@ def paint(graph, n):
 
     for node in range(len(nodes)):
         found_color = False
-        for colr in range(n):
+        for colr in (x for x in range(n) if x != node):
             if adjacents_have_diff_colors(adjacents[node], colr):
                 found_color = True
                 colors[nodes[node]] = colr
                 break
-
         if not found_color:
             return False
+
 
     color_str = "["
     for key in colors:
@@ -291,7 +292,6 @@ def paint(graph, n):
     color_str = color_str[:-2] + "]"
 
     return color_str
-
 
 def is_Bipartite(graph):
     """
@@ -302,16 +302,3 @@ def is_Bipartite(graph):
         return False
     return True if paint(graph, 2) else False
 
-#print(is_Bipartite([[1,2],[3,2]]))
-#print(paint([[2,3], [1,2], [3,1], [2,3], [2,2],[3,2], [1,3], [4,1], [1,4], [4,4]], 3))
-#print(matrix_incidence_uфndirected([[1,1], [2,3], [2,3], [3,1], [1,3], [4]]))
-#print(cycle_Hamiltonian_directed(sorted([[1,2], [2,3],  [3,4], [4,5], [5,1]])))
-#print(cycle_Hamiltonian_directed(sorted([[1,5], [5,3],  [3,2], [2,4], [4,1]])))
-#print(cycle_Hamiltonian_undirected(sorted([[2,3], [1,2], [3,1], [2,3], [2,2],[3,2], [1,3], [4,1], [1,4], [4,4]])))
-#print(matrix_incidence_undirected(sorted([[2,3], [1,2], [3,1], [2,3], [2,2],[3,2], [1,3], [4,1], [1,4], [4,4]])))
-#print(sorted([[2,3], [1,2], [3,1], [2,3], [2,2],[3,2], [1,3], [4,1], [1,4], [4,4]]))
-#print(matrix_adjacency_directed(sorted([[2,3], [1,2], [3,1], [2,3], [2,2],[3,2], [1,3], [4,1], [1,4], [4,4]])))
-#print(cycle_Euler_undirected(sorted([[1,4], [1,5], [2,4], [2,5], [4,5], [5,1], [5,3], [4,3]] )))
-#print(cycle_Euler_directed(sorted([[1,4], [1,5], [2,4], [2,5], [4,5], [5,1], [5,3], [4,3], [4,2]] )))
-#print(cycle_Euler_directed(sorted([[1,2], [2,3],  [4,1]] )))
-#print(cycle_Euler_directed(sorted([[1,2], [2,4],  [4,3], [3,5], [5,1]] )))

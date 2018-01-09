@@ -12,44 +12,39 @@
                         <div style="display: block ; background-color: rgba(255,255,255,0.2)">
                             <h3> Анімація Графа - {{ graph_lst }}</h3>
                             <div id="canvas" style=" height: 500px; border: 2px solid #86e1c7;"></div>
-
-                            <h4>{% if parallelEdges %}
-                                parallelEdges
-                            {% endif %}
-                            </h4>
-                            <h4>{% if isMulti %}
-                                isMulti
-                            {% endif %}
-                            </h4>
-                            <h4>{% if isPseudo %}
-                                isPseudo
-                            {% endif %}
-                            </h4>
-                            <h4>{% if isSimple %}
-                                isSimple
-                            {% endif %}
-                            </h4>
-                            <h4>{% if isComplete %}
-                                isComplete
-                            {% endif %}
-                            </h4>
-                            <h4>{% if isCycle %}
-                                isCycle
-                            {% endif %}
-                            </h4>
-                            <h4>{% if isWheel %}
-                                isWheel
-                            {% endif %}
-                            </h4>
-                            <h4>{% if isDirectedMulti %}
-                                isDirectedMulti
-                            {% endif %}
-                            </h4>
-                            <h4>{% if isDirectedCycle %}
-                                isDirectedCycle
-                            {% endif %}
-                            </h4>
-                        <h3>Матриця інцидентості</h3>
+                            <h3>Вид графа</h3>
+                            <div style="display: inline-block">
+                                <h4>{% if parallelEdges %}
+                                    паралельний
+                                {% endif %}
+                                </h4>
+                                <h4>{% if isMulti %}
+                                    мультиграф
+                                {% endif %}
+                                </h4>
+                                <h4>{% if isPseudo %}
+                                    псевдо граф
+                                {% endif %}
+                                </h4>
+                                <h4>{% if isSimple %}
+                                    простий
+                                {% endif %}
+                                </h4>
+                                <h4>{% if isComplete %}
+                                    isComplete
+                                {% endif %}
+                                </h4>
+                                <h4>{% if isCycle %}
+                                    цикл
+                                {% endif %}
+                                </h4>
+                                <h4>{% if isWheel %}
+                                    колесо
+                                {% endif %}
+                                </h4>
+                            </div>
+                            <hr>
+                            <h3>Матриця інцидентості</h3>
                             <table style="width:100%;">
                                 {% for item in matrix_incidence_undirected %}
                                     <tr>
@@ -97,12 +92,10 @@
                 </div>
             </div>
     </header>
-    </div>
+
     <script src="{% static 'static/polls/js/mini.js' %}" charset="utf-8"></script>
     <script type="text/javascript" src="{% static 'static/polls/js/jsnetworkx.js' %}"></script>
 
-
-    <!--<script type ="text/javascript" src="{% static 'static/polls/js/Plswork.js' %}"></script>-->
     <script type="text/javascript">
         var G = new jsnx.Graph();
 
@@ -110,7 +103,15 @@
 
         jsnx.draw(G, {
             element: '#canvas',
+            layoutAttr: {
+                charge: -120,
+                linkDistance: 100
+            },
+            nodeAttr: {
+                r: 15,
+            },
             withLabels: true,
+            weighted_stroke: true,
             nodeStyle: {
                 fill: function (d) {
                     return d.data.color;
@@ -120,7 +121,6 @@
             stickyDrag: true
         });
     </script>
-
 
 {% endblock %}
 

@@ -88,7 +88,7 @@ def isCycle(lst):
     nodes = len(Nodes(lst))
     edges = [sorted(edge) for edge in lst]
     edges = sorted(edges, key=lambda x:x[0])
-    if (nodes < 3) and (isSimple(lst) is False):
+    if (nodes < 3) or (len(lst) < 3) or (isSimple(lst) is False):
         return False
     elif (edges[0][0] != edges[1][0]) or (edges[0][1] != edges[2][0]) or (edges[1][1] != edges[-1][1]):
         return False
@@ -127,32 +127,6 @@ def isWheel(lst):
             elif nodes.count(node) == n - 1 :
                 count += n - 1
         if (count == (n-1) *(3 + (n-1))):
-            return True
-        else:
-            return False
-
-
-def isDirectedMulti(lst):
-    """
-    Returns True if a directed graph is a Multi graph, False otherwise.
-    Use only for DIRECTED graphs.
-    """
-    if parallelEdges(lst) is True:
-        return True
-    else:
-        return False
-
-
-
-def isDirectedCycle(lst):
-    """
-    Returns True if a directed graph is a Cycle graph, False otherwise.
-    Use only for DIRECTED graphs.
-    """
-    nodes = len(Nodes(lst))
-    lst = sorted(lst, key=lambda x:x[0])
-    for i in range(len(lst) - 1):
-        if (nodes >= 3) and (lst[i][1] == lst[i + 1][0]) and (lst[-1][1] == lst[0][0]) and (isSimple(lst) is True):
             return True
         else:
             return False

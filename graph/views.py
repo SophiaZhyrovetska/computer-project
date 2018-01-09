@@ -6,9 +6,7 @@ from django.views import View
 from .forms import SubmitUrlForm
 from .functions import matrix_adjacency_undirected, cycle_Euler_undirected, cycle_Hamiltonian_undirected, is_Bipartite, \
     paint, matrix_incidence_undirected
-from .graphType import parallelEdges, isMulti, isPseudo, isSimple, isComplete, isCycle, isWheel, isDirectedMulti, \
-    isDirectedCycle
-
+from .graphType import parallelEdges, isMulti, isPseudo, isSimple, isComplete, isCycle, isWheel
 
 # Create your views here.
 def home_view_fbv(request, *args, **kwargs):
@@ -50,8 +48,6 @@ class home_view(View):
             "isComplete": isComplete(lst_graph),
             "isCycle": isCycle(lst_graph),
             "isWheel": isWheel(lst_graph),
-            "isDirectedMulti": isDirectedMulti(lst_graph),
-            "isDirectedCycle": isDirectedCycle(lst_graph),
         }
         return render(request, "add_home.html", context)
 
