@@ -1,19 +1,6 @@
 
-
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
 ol, ul {
   list-style: none;
-}
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
 }
 table {
   border-collapse: collapse;
@@ -22,11 +9,6 @@ table {
 
 /* particleground demo */
 
-* {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
 
 html, body {
   width: 100%;
@@ -53,7 +35,6 @@ body {
 
 #intro {
   position: absolute;
-  left: 0;
     top:50%;
   width: 100%;
   text-align: center;
@@ -86,71 +67,6 @@ p {
 }
 
 
-@media (max-width: 1200px) {
-
-}
-@-moz-keyframes spin {
-    100% {
-        -moz-transform: rotate(360deg);
-    }
-}
-
-@-webkit-keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-@keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-
-
-
-@media only screen and (max-width: 1000px) {
-  h1 {
-    font-size: 70px;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  h1 {
-    font-size: 48px;
-  }
-  h1::after {
-    height: 8px;
-  }
-}
-
-@media only screen and (max-width: 568px) {
-  #intro {
-    padding: 0 10px;
-  }
-  h1 {
-    font-size: 30px;
-  }
-  h1::after {
-    height: 6px;
-  }
-  p {
-    font-size: 18px;
-  }
-  .btn {
-    font-size: 16px;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  h1 {
-    font-size: 28px;
-  }
-  h1::after {
-    height: 4px;
-  }
-}
 
 
 

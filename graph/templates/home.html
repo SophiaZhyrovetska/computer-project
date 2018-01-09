@@ -28,19 +28,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-2"></div>
-                <div id="Secion_graph" class="col-md-8">
-
-                    <div class="folders">
-                        {% block content %}{% endblock content %}
-                    </div>
+                <div class="col-md-8">
+                    {% block content %}{% endblock content %}
                 </div>
                 <div class="col-md-2"></div>
             </div>
         </div>
     </div>
-    <footer>
-
-    </footer>
 </header>
 <script type="text/javascript" src="{% static 'static/polls/js/jsnetworkx.js' %}" charset="utf-8"></script>
 <script type="text/javascript" src="{% static 'static/polls/js/d3.js' %}"></script>
