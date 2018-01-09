@@ -12,4 +12,4 @@ CS@UCU first-year project for Discrete Mathematics, which gives you an opportuni
 
 
 
-<p>Bilayev Mikola, Sophia Cholod,Sophia Zhyrovetska</p>
+<p>Bilayev Mikola, Sophia Kholod,Sophia Zhyrovetska</p>
