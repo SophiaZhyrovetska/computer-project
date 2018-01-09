@@ -5,7 +5,9 @@ from django.http import HttpResponse
 from django.views import View
 from .forms import SubmitUrlForm
 from .functions import matrix_adjacency_undirected, cycle_Euler_undirected, cycle_Hamiltonian_undirected, is_Bipartite, \
-    paint,matrix_incidence_undirected
+    paint, matrix_incidence_undirected
+from .graphType import parallelEdges, isMulti, isPseudo, isSimple, isComplete, isCycle, isWheel, isDirectedMulti, \
+    isDirectedCycle
 
 
 # Create your views here.
@@ -38,8 +40,18 @@ class home_view(View):
             "cycle_Euler_undirected": cycle_Euler_undirected(lst_graph),
             "cycle_Hamiltonian_undirected": cycle_Hamiltonian_undirected(lst_graph),
             "is_Bipartite": is_Bipartite(lst_graph),
-            "matrix_incidence_undirected":matrix_incidence_undirected(lst_graph),
-            "form": form
+            "matrix_incidence_undirected": matrix_incidence_undirected(lst_graph),
+            "form": form,
+
+            "parallelEdges": parallelEdges(lst_graph),
+            "isMulti": isMulti(lst_graph),
+            "isPseudo": isPseudo(lst_graph),
+            "isSimple": isSimple(lst_graph),
+            "isComplete": isComplete(lst_graph),
+            "isCycle": isCycle(lst_graph),
+            "isWheel": isWheel(lst_graph),
+            "isDirectedMulti": isDirectedMulti(lst_graph),
+            "isDirectedCycle": isDirectedCycle(lst_graph),
         }
         return render(request, "add_home.html", context)
 

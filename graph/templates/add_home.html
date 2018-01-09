@@ -13,6 +13,43 @@
                             <h3> Анімація Графа - {{ graph_lst }}</h3>
                             <div id="canvas" style=" height: 500px; border: 2px solid #86e1c7;"></div>
                             <h3>Матриця інцидентості</h3>
+                            <h4>{% if parallelEdges %}
+                                parallelEdges
+                            {% endif %}
+                            </h4>
+                            <h4>{% if isMulti %}
+                                isMulti
+                            {% endif %}
+                            </h4>
+                            <h4>{% if isPseudo %}
+                                isPseudo
+                            {% endif %}
+                            </h4>
+                            <h4>{% if isSimple %}
+                                isSimple
+                            {% endif %}
+                            </h4>
+                            <h4>{% if isComplete %}
+                                isComplete
+                            {% endif %}
+                            </h4>
+                            <h4>{% if isCycle %}
+                                isCycle
+                            {% endif %}
+                            </h4>
+                            <h4>{% if isWheel %}
+                                isWheel
+                            {% endif %}
+                            </h4>
+                            <h4>{% if isDirectedMulti %}
+                                isDirectedMulti
+                            {% endif %}
+                            </h4>
+                            <h4>{% if isDirectedCycle %}
+                                isDirectedCycle
+                            {% endif %}
+                            </h4>
+
                             <table style="width:100%;">
                                 {% for item in matrix_incidence_undirected %}
                                     <tr>
