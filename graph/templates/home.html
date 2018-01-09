@@ -20,8 +20,31 @@
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <title>Калькулятор</title>
 </head>
-{% block navbar %}
-{% endblock %}
+<div id="bar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" style="color: black; font-weight: bold">Онлайн Калькулятор</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Створили <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Підказки</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Можливості</a>
+                </li>
+            </ul>
+            <span class="navbar-text" style="float: right">
+        <img src="{% static 'static/polls/img/cs_logo-01-1024x468.png' %}" width="100px" height="50px" alt="">
+             </span>
+        </div>
+    </nav>
+</div>
 <body id="particles">
 
 {% block content %}{% endblock content %}
