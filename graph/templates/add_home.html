@@ -10,36 +10,36 @@
                     <div class="col-lg-2"></div>
                     <div class="col-lg-8">
                         <div style="display: block ; background-color: rgba(255,255,255,0.2)">
-                            <h3> Анімація Графа - {{ graph_lst }}</h3>
+                            <h3>  Граф - {{ graph_lst }}</h3>
                             <div id="canvas" style=" height: 500px; border: 2px solid #86e1c7;"></div>
-                            <h3>Вид графа</h3>
+                            <h3>Вид графа:</h3>
                             <div style="display: inline-block">
                                 <h4>{% if parallelEdges %}
-                                    паралельний
+                                    Паралельний
                                 {% endif %}
                                 </h4>
                                 <h4>{% if isMulti %}
-                                    мультиграф
+                                    Мультиграф
                                 {% endif %}
                                 </h4>
                                 <h4>{% if isPseudo %}
-                                    псевдо граф
+                                    Псевдо граф
                                 {% endif %}
                                 </h4>
                                 <h4>{% if isSimple %}
-                                    простий
+                                    Простий
                                 {% endif %}
                                 </h4>
                                 <h4>{% if isComplete %}
-                                    isComplete
+                                    Повний
                                 {% endif %}
                                 </h4>
                                 <h4>{% if isCycle %}
-                                    цикл
+                                    Цикл
                                 {% endif %}
                                 </h4>
                                 <h4>{% if isWheel %}
-                                    колесо
+                                    Колесо
                                 {% endif %}
                                 </h4>
                             </div>
@@ -86,17 +86,22 @@
                                 <h4>Граф не Двочастковий</h4>
                             {% endif %}
                             <hr>
+
                         </div>
                         <div class="col-lg-2"></div>
                     </div>
+                                                    <div class="footer">works
+             </div>
                 </div>
             </div>
     </header>
+
 
     <script src="{% static 'static/polls/js/mini.js' %}" charset="utf-8"></script>
     <script type="text/javascript" src="{% static 'static/polls/js/jsnetworkx.js' %}"></script>
 
     <script type="text/javascript">
+        document.querySelector('#canvas').addEventListener('mousedown', () => { document.documentElement.scrollTop = 0 })
         var G = new jsnx.Graph();
 
         G.addEdgesFrom({{ graph_lst }});
@@ -105,10 +110,10 @@
             element: '#canvas',
             layoutAttr: {
                 charge: -120,
-                linkDistance: 100
+                linkDistance: 150
             },
             nodeAttr: {
-                r: 15,
+                r: 25
             },
             withLabels: true,
             weighted_stroke: true,

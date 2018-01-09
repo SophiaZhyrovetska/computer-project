@@ -8,6 +8,7 @@ from .functions import matrix_adjacency_undirected, cycle_Euler_undirected, cycl
     paint, matrix_incidence_undirected
 from .graphType import parallelEdges, isMulti, isPseudo, isSimple, isComplete, isCycle, isWheel
 
+
 # Create your views here.
 def home_view_fbv(request, *args, **kwargs):
     if request.method == "POST":
@@ -25,13 +26,24 @@ class home_view(View):
 
     def post(self, request, *args, **kwargs):
         form = SubmitUrlForm(request.POST)
-        lst_graph = []
+        lst_graph = [[]]
         if form.is_valid():
             print(list(form.cleaned_data.get("url")))
-        for i in range(len(form.cleaned_data.get("url"))):
-            if form.cleaned_data.get("url")[i] == ",":
-                lst_graph.append([int(form.cleaned_data.get("url")[i - 1]), int(form.cleaned_data.get("url")[i + 1])])
-        print(lst_graph)
+        lst = form.cleaned_data.get("url")
+        number = ""
+        for i in range(len(lst)):
+            if lst[i].isdigit():
+                number += lst[i]
+            elif lst[i] == ",":
+                lst_graph[-1].append(int(number))
+                number = ""
+            elif lst[i] == ")" or lst[i] == "}":
+                lst_graph[-1].append(int(number))
+                number = ""
+                lst_graph.append([])
+        lst_graph.pop()
+        lst_graph.sort(key=lambda x: x[0])
+
         context = {
             "graph_lst": lst_graph,
             "matrix_adjacency_undirected": matrix_adjacency_undirected(lst_graph),
@@ -47,7 +59,7 @@ class home_view(View):
             "isSimple": isSimple(lst_graph),
             "isComplete": isComplete(lst_graph),
             "isCycle": isCycle(lst_graph),
-            "isWheel": isWheel(lst_graph),
+            "isWheel": isWheel(lst_graph)
         }
         return render(request, "add_home.html", context)
 

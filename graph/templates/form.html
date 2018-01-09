@@ -5,21 +5,24 @@
         <div class="main_block">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-2"></div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-10">
                         <h3>Інструкція
-                            <small style="font-weight: boldl; color: black;">типу вводити лише (0,3) (0,4)</small>
+                            <small style="font-weight: bold; color: black;"> вводити : (0,3) (0,4) або {0,3}{0,4}</small>
                         </h3>
-                        <h1 style="color: #fff;">Онлайн Калькулятор</h1>
+                        <h1 style="color: #fff;"></h1>
                         <form method="post" action=".">{% csrf_token %}
                             {{ form.as_p }}
-                            <input type="submit" value="Підтвердити вершини"
-                                   style=" background-color: #fff; font-weight: bold;">
+                            <input type="submit" value="ОК"
+                                   style=" border-radius:100%;background-color:#fff; width:40px;height:40px;font-weight: 900;">
                         </form>
                     </div>
-                    <div class="col-lg-2"></div>
+                    <div class="col-lg-1"></div>
                 </div>
             </div>
         </div>
     </header>
+{% endblock %}
+{% block footer %}
+    <footer>Footer</footer>
 {% endblock %}
