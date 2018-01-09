@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0db2962-502c-4d84-8c03-9cad96103b32" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/graph/forms.py" afterPath="$PROJECT_DIR$/graph/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/graph/static/polls/home.css" afterPath="$PROJECT_DIR$/graph/static/polls/home.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/graph/templates/add_home.html" afterPath="$PROJECT_DIR$/graph/templates/add_home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/graph/templates/error.html" afterPath="$PROJECT_DIR$/graph/templates/error.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/graph/templates/form.html" afterPath="$PROJECT_DIR$/graph/templates/form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/graph/templates/home.html" afterPath="$PROJECT_DIR$/graph/templates/home.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,19 +14,23 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/computer_project_try2$Test__graph_templates_home_html.coverage" NAME="Test: graph.templates.home.html Coverage Results" MODIFIED="1515534046289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="form.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="form.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/graph/templates/form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+            <state relative-caret-position="60">
+              <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
               <folding>
-                <element signature="e#313#333#0#HTML" expanded="true" />
-                <element signature="e#399#439#0#HTML" expanded="true" />
-                <element signature="e#482#554#0#HTML" expanded="true" />
-                <element signature="e#615#687#0#HTML" expanded="true" />
-                <element signature="e#1120#1211#0#HTML" expanded="true" />
+                <element signature="e#70#87#0#HTML" expanded="true" />
+                <element signature="e#313#349#0#HTML" expanded="true" />
+                <element signature="e#415#455#0#HTML" expanded="true" />
+                <element signature="e#498#570#0#HTML" expanded="true" />
+                <element signature="e#631#703#0#HTML" expanded="true" />
+                <element signature="e#1136#1227#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -59,8 +61,8 @@
       <file leaf-file-name="add_home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/graph/templates/add_home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1312">
-              <caret line="95" column="17" lean-forward="false" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
+            <state relative-caret-position="57">
+              <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
@@ -73,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/graph/static/polls/home.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+            <state relative-caret-position="504">
+              <caret line="90" column="23" lean-forward="false" selection-start-line="90" selection-start-column="23" selection-end-line="90" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -86,8 +88,8 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/graph/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+            <state relative-caret-position="581">
+              <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -112,8 +114,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/graph/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="729">
-              <caret line="76" column="42" lean-forward="false" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
+            <state relative-caret-position="476">
+              <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -191,13 +193,13 @@
         <option value="$PROJECT_DIR$/graph/graphType.py" />
         <option value="$PROJECT_DIR$/graph/static/polls/js/demo.js" />
         <option value="$PROJECT_DIR$/graph/static/polls/js/graph.js" />
-        <option value="$PROJECT_DIR$/graph/templates/home.html" />
         <option value="$PROJECT_DIR$/graph/views.py" />
-        <option value="$PROJECT_DIR$/graph/templates/add_home.html" />
-        <option value="$PROJECT_DIR$/graph/static/polls/home.css" />
         <option value="$PROJECT_DIR$/graph/templates/error.html" />
         <option value="$PROJECT_DIR$/graph/forms.py" />
         <option value="$PROJECT_DIR$/graph/templates/form.html" />
+        <option value="$PROJECT_DIR$/graph/templates/home.html" />
+        <option value="$PROJECT_DIR$/graph/templates/add_home.html" />
+        <option value="$PROJECT_DIR$/graph/static/polls/home.css" />
       </list>
     </option>
   </component>
@@ -318,7 +320,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Django server.computer_project_try2">
+  <component name="RunManager" selected="Django tests.Test: graph.templates.home.html">
+    <configuration name="Test: graph.templates.home.html" type="DjangoTestsConfigurationType" factoryName="Django tests" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="computer_project_try2" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="graph.templates.home.html" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+    </configuration>
     <configuration name="computer_project_try2" type="Python.DjangoServer" factoryName="Django server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -342,6 +363,15 @@
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
     </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Django server.computer_project_try2" />
+      <item index="1" class="java.lang.String" itemvalue="Django tests.Test: graph.templates.home.html" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Django tests.Test: graph.templates.home.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -517,11 +547,12 @@
         <state relative-caret-position="90">
           <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
           <folding>
-            <element signature="e#313#333#0#HTML" expanded="true" />
-            <element signature="e#399#439#0#HTML" expanded="true" />
-            <element signature="e#482#554#0#HTML" expanded="true" />
-            <element signature="e#615#687#0#HTML" expanded="true" />
-            <element signature="e#1120#1211#0#HTML" expanded="true" />
+            <element signature="e#70#87#0#HTML" expanded="true" />
+            <element signature="e#313#349#0#HTML" expanded="true" />
+            <element signature="e#415#455#0#HTML" expanded="true" />
+            <element signature="e#498#570#0#HTML" expanded="true" />
+            <element signature="e#631#703#0#HTML" expanded="true" />
+            <element signature="e#1136#1227#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -693,61 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graph/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/templates/graph_picture.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="76" column="42" lean-forward="false" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/static/polls/home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph/templates/add_home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1312">
-          <caret line="95" column="17" lean-forward="false" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#0;n#tr#0;n#table#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/graph/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -772,6 +748,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/graph/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/templates/graph_picture.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/templates/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <folding>
+            <element signature="e#70#87#0#HTML" expanded="true" />
+            <element signature="e#313#349#0#HTML" expanded="true" />
+            <element signature="e#415#455#0#HTML" expanded="true" />
+            <element signature="e#498#570#0#HTML" expanded="true" />
+            <element signature="e#631#703#0#HTML" expanded="true" />
+            <element signature="e#1136#1227#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/graph/templates/error.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -782,17 +805,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graph/templates/form.html">
+    <entry file="file://$PROJECT_DIR$/graph/templates/add_home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+        <state relative-caret-position="57">
+          <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
           <folding>
-            <element signature="e#313#333#0#HTML" expanded="true" />
-            <element signature="e#399#439#0#HTML" expanded="true" />
-            <element signature="e#482#554#0#HTML" expanded="true" />
-            <element signature="e#615#687#0#HTML" expanded="true" />
-            <element signature="e#1120#1211#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#table#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph/static/polls/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="90" column="23" lean-forward="false" selection-start-line="90" selection-start-column="23" selection-end-line="90" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>

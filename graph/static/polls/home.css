@@ -86,8 +86,8 @@ footer, .footer {
 #particles {
     background-color: #4B9D86;
 }
-@media (max-height: 900px) {
-    #intro .row{
-        margin-top: 300px;
+@media (max-height: 1000px) {
+    .ones .row{
+        margin-top: 200px;
     }
 }
