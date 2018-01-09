@@ -1,5 +1,5 @@
 <h1>GodGraphs</h1>
-<small>made on Django</small>
+<small>made on Django(also used d3.js and particleground.js)</small>
 <h2 style="color:red; font-weight:700">FREE EARLY ACCESS Graph discover site</h2>
 <p>
 CS@UCU first-year project for Discrete Mathematics, which gives you an opportunity to discover one of most important field of discrete math - graphs</p>
@@ -19,4 +19,4 @@ How to use:<br>1. Enter the edges of your graph and remember to follow the instr
 </p>
 
 
-<p>By Bilayev Mikola, Sophia Kholod,Sophia Zhyrovetska</p>
+<p>By Bilayev Mikola, Sophia Zhyrovetska,Sophia Kholod</p>
