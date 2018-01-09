@@ -8,9 +8,14 @@
                     <div class="col-lg-1"></div>
                     <div class="col-lg-10">
                         <h3 style="color: #fff;">Інструкція вводити:
-                            <small style="font-weight: bold; color: black;"> <span style=" border:1px solid black;background-color: rgba(255,255,255,0.4);">(0,3) (0,4)</span> або <span style=" border:1px solid black;background-color: rgba(255,255,255,0.4);">{0,3}{0,4}</span></small>
+                            <small style="font-weight: bold; color: black;"><span
+                                    style=" border:1px solid black;background-color: rgba(255,255,255,0.4);">(0,3) (0,4)</span>
+                                або <span style=" border:1px solid black;background-color: rgba(255,255,255,0.4);">{0,3}{0,4}</span>
+                            </small>
                         </h3>
                         <h1 style="color: #fff;"></h1>
+                        {% block error %}
+                        {% endblock %}
                         <form method="post" action=".">{% csrf_token %}
                             {{ form.as_p }}
                             <input type="submit" value="ОК"

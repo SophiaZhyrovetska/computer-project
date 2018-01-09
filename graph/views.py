@@ -26,23 +26,43 @@ class home_view(View):
 
     def post(self, request, *args, **kwargs):
         form = SubmitUrlForm(request.POST)
-        lst_graph = [[]]
+
         if form.is_valid():
             print(list(form.cleaned_data.get("url")))
-        lst = form.cleaned_data.get("url")
-        number = ""
-        for i in range(len(lst)):
-            if lst[i].isdigit():
-                number += lst[i]
-            elif lst[i] == ",":
-                lst_graph[-1].append(int(number))
-                number = ""
-            elif lst[i] == ")" or lst[i] == "}":
-                lst_graph[-1].append(int(number))
-                number = ""
-                lst_graph.append([])
-        lst_graph.pop()
-        lst_graph.sort(key=lambda x: x[0])
+        lst = list(form.cleaned_data.get("url"))
+
+        def graph(lst):
+            lst_graph = [[]]
+            number = ""
+            for i in range(len(lst)):
+                if lst[i].isdigit():
+                    number += lst[i]
+                elif lst[i] == ",":
+                    try:
+                        lst_graph[-1].append(int(number))
+                        number = ""
+                    except:
+                        pass
+                elif lst[i] == ")" or lst[i] == "}" or lst[i] == "]":
+                    lst_graph[-1].append(int(number))
+                    number = ""
+                    lst_graph.append([])
+            lst_graph.pop()
+            lst_graph.sort(key=lambda x: x[0])
+            return lst_graph
+
+        try:
+            lst_graph = graph(lst)
+        except:
+
+            lst_graph = []
+
+        if not lst_graph:
+            The_form = SubmitUrlForm()
+            context = {
+                "form": The_form
+            }
+            return render(request, "error.html", context)
 
         context = {
             "graph_lst": lst_graph,
@@ -61,7 +81,9 @@ class home_view(View):
             "isCycle": isCycle(lst_graph),
             "isWheel": isWheel(lst_graph)
         }
+
         return render(request, "add_home.html", context)
+
 
 
 class graph_view(View):
