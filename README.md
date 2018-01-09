@@ -5,9 +5,9 @@
 CS@UCU first-year project for Discrete Mathematics, which gives you an opportunity to discover one of most important field of discrete math - graphs</p>
 <h2>What You Can Do:</h2>
 <h3>1. Visualize your graph</h3>
-<h3>2. Different types of matrixes(matrix of incidence, adjacency matrix)</h3>
-<h3>3. Faster and Greater Hamiltonian and Euler cycles</h3>
-<h3>4. MORE - SOON</h3>
+<h3>2. See different types of matrixes(matrix of incidence, adjacency matrix)</h3>
+<h3>3. Try out Faster and Greater Hamiltonian and Euler cycles</h3>
+<h3>4. MORE - SOON!</h3>
 
 
 
@@ -19,4 +19,4 @@ How to use:<br>1. Enter the edges of your graph and remember to follow the instr
 </p>
 
 
-<p>By Bilayev Mikola, Sophia Zhyrovetska,Sophia Kholod</p>
+<p>By Bilayev Mikola, Sophia Zhyrovetska, Sophia Kholod</p>
