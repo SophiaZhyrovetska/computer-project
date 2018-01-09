@@ -87,7 +87,7 @@ footer, .footer {
 #particles {
     background-color: #4B9D86;
 }
-@media (max-height: 1000px) {
+@media (max-height: 1080px) {
     .ones .row{
         margin-top: 200px;
     }
