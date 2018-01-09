@@ -11,6 +11,12 @@ CS@UCU first-year project for Discrete Mathematics, which gives you an opportuni
 
 
 
+<p>
+How to use:<br>1. Enter the edges of your graph and remember to follow the instructions
+<br>2. Enjoy and observe the visualized graph
+<br>3. See the features of the graph
+<br>4. And don`t forget: if you liked our project, support us on Facebook: https://www.facebook.com/csatucu/
+</p>
 
 
 <p>By Bilayev Mikola, Sophia Kholod,Sophia Zhyrovetska</p>
