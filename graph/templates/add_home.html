@@ -17,19 +17,25 @@
                                 {% for item in matrix_incidence_undirected %}
                                     <tr>
                                         {% for num in item %}
-                                            <th>{{ num }}</th>
+                                            <th style="text-align: center">{{ num }}</th>
                                         {% endfor %}
                                     </tr>
                                 {% endfor %}
                             </table>
                             <hr>
-                            <ul>
 
-                                <h3>Матриця суміжності</h3>
+
+                            <h3>Матриця суміжності</h3>
+                            <table width="100%">
                                 {% for item in matrix_adjacency_undirected %}
-                                    <li><h4 style="letter-spacing: 15px">{{ item }}</h4></li>
+                                    <tr>
+                                        {% for num in item %}
+                                            <th style="text-align: center">{{ num }}</th>
+                                        {% endfor %}
+                                    </tr>
                                 {% endfor %}
-                            </ul>
+                            </table>
+
                             <hr>
                             <h3>Цикл Ейлера</h3>
                             {{ cycle_Euler_undirected }}
