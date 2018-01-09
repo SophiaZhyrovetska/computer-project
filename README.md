@@ -1,5 +1,5 @@
 <h1>GodGraphs</h1>
-<small>made on Django(also used d3.js and particleground.js)</small>
+<small>made on <i>Django</i>(also used <i>d3.js and particleground.js</i>)</small>
 <h2 style="color:red; font-weight:700">FREE EARLY ACCESS Graph discover site</h2>
 <p>
 CS@UCU first-year project for Discrete Mathematics, which gives you an opportunity to discover one of most important field of discrete math - graphs</p>
