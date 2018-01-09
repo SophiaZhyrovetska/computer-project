@@ -12,7 +12,7 @@
                         <div style="display: block ; background-color: rgba(255,255,255,0.2)">
                             <h3> Анімація Графа - {{ graph_lst }}</h3>
                             <div id="canvas" style=" height: 500px; border: 2px solid #86e1c7;"></div>
-                            <h3>Матриця інцидентості</h3>
+
                             <h4>{% if parallelEdges %}
                                 parallelEdges
                             {% endif %}
@@ -49,7 +49,7 @@
                                 isDirectedCycle
                             {% endif %}
                             </h4>
-
+                        <h3>Матриця інцидентості</h3>
                             <table style="width:100%;">
                                 {% for item in matrix_incidence_undirected %}
                                     <tr>
