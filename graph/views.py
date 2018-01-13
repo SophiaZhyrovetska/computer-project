@@ -8,7 +8,7 @@ from .functions import matrix_adjacency_undirected, cycle_Euler_undirected, cycl
     paint, matrix_incidence_undirected
 from .graphType import parallelEdges, isMulti, isPseudo, isSimple, isComplete, isCycle, isWheel
 
-
+import copy
 # Create your views here.
 def home_view_fbv(request, *args, **kwargs):
     if request.method == "POST":
@@ -28,7 +28,7 @@ class home_view(View):
         form = SubmitUrlForm(request.POST)
 
         if form.is_valid():
-            print(list(form.cleaned_data.get("url")))
+            print((form.cleaned_data.get("url")))
         lst = list(form.cleaned_data.get("url"))
 
         def graph(lst):
@@ -54,7 +54,6 @@ class home_view(View):
         try:
             lst_graph = graph(lst)
         except:
-
             lst_graph = []
 
         if not lst_graph:
@@ -62,12 +61,13 @@ class home_view(View):
             context = {
                 "form": The_form
             }
-            return render(request, "error.html", context)
 
+            return render(request, "error.html", context)
+        print(lst_graph, type(lst_graph[0]))
         context = {
-            "graph_lst": lst_graph,
+            "graph_lst":lst_graph.copy(),
             "matrix_adjacency_undirected": matrix_adjacency_undirected(lst_graph),
-            "cycle_Euler_undirected": cycle_Euler_undirected(lst_graph),
+
             "cycle_Hamiltonian_undirected": cycle_Hamiltonian_undirected(lst_graph),
             "is_Bipartite": is_Bipartite(lst_graph),
             "matrix_incidence_undirected": matrix_incidence_undirected(lst_graph),
@@ -79,9 +79,11 @@ class home_view(View):
             "isSimple": isSimple(lst_graph),
             "isComplete": isComplete(lst_graph),
             "isCycle": isCycle(lst_graph),
-            "isWheel": isWheel(lst_graph)
+            "isWheel": isWheel(lst_graph),
+            "cycle_Euler_undirected": cycle_Euler_undirected(lst_graph)
         }
 
+        print("Here#####")
         return render(request, "add_home.html", context)
 
 

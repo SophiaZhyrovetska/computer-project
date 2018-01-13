@@ -1,4 +1,3 @@
-
 def get_nodes(graph):
     """
     Returns a sorted list of all nodes in a graph
