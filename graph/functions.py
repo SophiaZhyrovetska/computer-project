@@ -132,31 +132,6 @@ def cycle_Euler_undirected(graph):
     return tour
 
 
-def cycle_Euler_directed(graph):
-    """
-    (list of lists) -> (list)
-    Checks if Euler cycle exists in a directed graph
-    Returns False if not
-    Else returns the list of nodes the cycle goes through
-    """
-    matrix = matrix_adjacency_directed(graph)
-    nodes = get_nodes(graph)
-
-    def find_tour(u, G, tour):
-        for [a, b] in (x for x in G if len(x) > 1):
-            if a == u:
-                G.remove([a, b])
-                find_tour(b, G, tour)
-        tour.insert(0, u)
-
-    tour = []
-    i = 0
-    while tour == [] or i == len(nodes) - 1:
-        find_tour(nodes[i], graph, tour)
-        i += 1
-    return tour if tour and len(tour) == len(list(x for x in matrix if
-                                                  sum(x) != 0)) + 1 else False
-
 
 def cycle_Hamiltonian_undirected(graph):
     """
@@ -178,8 +153,6 @@ def cycle_Hamiltonian_undirected(graph):
                 for newtour in newtours:
                     tours.append(newtour)
         return tours
-
-    cycles = []
     matrix = matrix_adjacency_undirected(graph)
     for node in matrix:
         if sum(node) == 0:
@@ -197,53 +170,6 @@ def cycle_Hamiltonian_undirected(graph):
                         tour.append(tour[0])
                         return tour
     return False
-
-
-def cycle_Hamiltonian_directed(graph):
-    """
-    (list of lists) -> (list)
-    Checks if Hamiltonian cycle exists in an directed graph
-    Returns False if not
-    Else returns the list of nodes the cycle goes through
-    """
-    def find_all_tours(graph, start, end, tour=[]):
-        tour = tour + [start]
-        if start == end:
-            return [tour]
-        if start not in nodes:
-            return []
-        tours = []
-
-        for edge in graph:
-            if edge[0] == start and edge[1] not in tour:
-                newtours = find_all_tours(graph, edge[1], end, tour)
-                for newtour in newtours:
-                    tours.append(newtour)
-
-        return tours
-
-    cycles = []
-    endnodes, startnodes = [], []
-
-    matrix = matrix_adjacency_undirected(graph)
-    for node in matrix:
-        if sum(node) == 0:
-            return False
-
-    nodes = get_nodes(graph)
-
-    for startnode in nodes:
-        for endnode in nodes:
-            newtours = find_all_tours(graph, startnode, endnode)
-            for tour in newtours:
-                if len(tour) == len(nodes):
-                    if [tour[len(nodes) - 1], tour[0]] in graph:
-                        tour.append(tour[0])
-                        return tour
-
-    return False
-
-
 def paint(graph, n):
     """
     Checks if a graph could be painted into n colours

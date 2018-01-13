@@ -74,6 +74,7 @@ class home_view(View):
             "form": form,
 
             "parallelEdges": parallelEdges(lst_graph),
+            ""
             "isMulti": isMulti(lst_graph),
             "isPseudo": isPseudo(lst_graph),
             "isSimple": isSimple(lst_graph),
